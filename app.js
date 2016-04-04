@@ -47,7 +47,10 @@ passport.use(new GoogleStrategy({
 },
 function(accessToken, refreshToken, profile, cb) {
   console.log(profile);
-  return cb(null, profile);
+
+  return cb(null, {displayName: profile.displayName, gender: profile.gender,
+                   profileImageURL: profile._json.image.url, photos: profile.photos,
+                   url:profile._json.image.url});
 }
 ));
 

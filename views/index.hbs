@@ -1,4 +1,6 @@
 <h1>{{title}}</h1>
+
+{{#if user}}
 <p>Welcome to Google oAuth <a href="{{user._json.url}}" target=_blank>{{user.displayName}}</a></p>
 <h3>Here are some things that I know about you:</h3>
 <ul>
@@ -17,3 +19,4 @@
   </li>
 
 </ul>
+{{/if}}

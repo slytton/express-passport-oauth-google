@@ -1,2 +1,19 @@
 <h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<p>Welcome to Google oAuth <a href="{{user._json.url}}" target=_blank>{{user.displayName}}</a></p>
+<h3>Here are some things that I know about you:</h3>
+<ul>
+  <li>You are {{user.gender}}</li>
+  <li>And here's your picture: <img src="{{user._json.image.url}}" alt="{{user.displayName}}'s picture'" /></li>
+  <li>
+    And here are a bunch of your pictures:
+    <ul>
+      {{#user.photos}}
+        <li><img src="{{value}}" alt="a picture" /></li>
+      {{/user.photos}}
+    </ul>
+  </li>
+  <li>
+    Yeah kinda creepy...
+  </li>
+
+</ul>

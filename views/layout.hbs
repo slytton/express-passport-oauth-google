@@ -5,6 +5,11 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    {{#if user}}
+    <a href="/logout">logout</a>
+    {{else}}
+    <a href="/auth/google">login</a>
+    {{/if}}
     {{{body}}}
   </body>
 </html>
